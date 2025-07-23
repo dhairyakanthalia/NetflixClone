@@ -1,0 +1,54 @@
+.header {
+    width: 100%;
+    position: relative; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;    
+    background: rgb(15, 15, 15);
+    z-index: 10;
+  }
+  .gptButton
+  {
+    padding: 4px;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 70px;
+    width: 120px;
+  }
+  
+  .user-logo {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 70px;
+  }
+
+  .user-name
+  {
+    color: #fffefe;
+  }
+  
+  .user-logo img {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+  }
+
+  .sign-out
+  { 
+    /* padding: 5px; */
+    margin: 2px;
+  }
+
+  .sign-out:hover
+  {
+    cursor: pointer;
+  }
+  

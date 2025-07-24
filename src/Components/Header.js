@@ -3,6 +3,7 @@ import './Styles/Header.css'
 import { auth } from '../Utils/Firebase';
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { onAuthStateChanged } from "firebase/auth";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -12,6 +13,18 @@ const Header = () => {
       navigate('/error');
     });
   }
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+        if (user) {
+          navigate("/browse");
+        } else {
+          navigate("/");
+        }
+      });
+
+      return () => unsubscribe();
+},[])
   
   return (
     <div className='header'>

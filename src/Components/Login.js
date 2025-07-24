@@ -64,7 +64,7 @@ const Login = () => {
           <h1>{signIn ? "Sign In" : "Sign Up"}</h1>
           {signIn ? "" : <input ref={name} type='text' placeholder='Name' className='name'/>}
           <input ref = {email} type='text' placeholder='Email Address' className='email'/>
-          <input ref = {password} type='text' placeholder='Password' className='password'/>
+          <input ref = {password} type='password' placeholder='Password' className='password'/>
           <p className='error'>{errorMessage}</p>
           <button className='signin' onClick={handleButton}>{signIn ? "Sign In" : "Sign Up"}</button>
           <p className='new' onClick={handleSignUp}> {signIn ? "New to Netflix? Sign Up Now." : "Already Registered? Back to Sign In."}</p>

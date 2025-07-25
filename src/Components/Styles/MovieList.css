@@ -1,0 +1,30 @@
+.movieList
+{
+    position: relative;
+    z-index: 20;
+}
+.list
+{
+    margin-left: 2.5%;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+
+}
+.movieTitle
+{
+    margin: 0;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    color: azure;
+}
+.movieCard
+{
+    overflow-x: scroll;
+}
+
+.cards
+{
+    padding-left: 30px;
+    display: flex;
+}

@@ -7,3 +7,5 @@ export const API_OPTIONS = {
   };
 
   export const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+
+  export const OPEN_AI_KEY = "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"

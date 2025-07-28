@@ -1,17 +1,27 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const gptSlice = createSlice(
     {
         name : 'gpt',
-        initialState : true,
+        initialState : {
+            showGptSearch:true,
+            movieResults:[],
+            movieNames:[]
+        },
         reducers : {
-            setGpt : (state, action) => {
-                return action.payload;
+            setGpt : (state) => {
+                console.log(state.showGptSearch);
+                state.showGptSearch = !state.showGptSearch
+            },
+            addGptMovieResult:(state,action)=>{
+                const { movieNames, movieResults} = action.payload
+                state.movieResults = movieResults
+                state.movieNames = movieNames
             }
         }
     }
 );
 
-export const {setGpt} = gptSlice.actions;
+export const {setGpt, addGptMovieResult} = gptSlice.actions;
 
 export default gptSlice.reducer;

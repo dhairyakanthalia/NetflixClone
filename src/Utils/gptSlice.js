@@ -4,13 +4,12 @@ const gptSlice = createSlice(
     {
         name : 'gpt',
         initialState : {
-            showGptSearch:true,
+            showGptSearch:false,
             movieResults:[],
             movieNames:[]
         },
         reducers : {
             setGpt : (state) => {
-                console.log(state.showGptSearch);
                 state.showGptSearch = !state.showGptSearch
             },
             addGptMovieResult:(state,action)=>{

@@ -25,7 +25,6 @@ const Header = () => {
   }
 
   const handleGpt = () => {    
-    console.log("clicke");
     dispatch(setGpt(!showGptSearch));
   }
 
@@ -48,13 +47,13 @@ const Header = () => {
     <div className='logo'>
         <img src = {require('../assets/netflix_logo.png')} alt = "logo"/>
     </div>
-      <>
+      { user && <>
       <div className='user-logo'>
       <button onClick={ handleGpt }  className='gptButton'>GPT Search</button>
       <img src= {require('../assets/user_logo.png')} alt='user_logo'/>
       <button onClick = {handleSignOut} className='sign-out'>Sign out</button>
       </div>
-      </>
+      </> }
     </div>
   )
 }

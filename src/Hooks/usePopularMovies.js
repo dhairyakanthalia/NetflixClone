@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { API_OPTIONS } from "../Utils/Constants";
+import { API_OPTIONS, TMDB_API_URL } from "../Utils/Constants";
 import { useDispatch } from "react-redux";
 import { addPopularMovies } from "../Utils/moviesSlice";
 
@@ -7,7 +7,7 @@ const usePopularMovies = () => {
 
     const dispatch = useDispatch();
     const getPopularMovies = async () => {
-        const data = await fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', API_OPTIONS)
+        const data = await fetch(TMDB_API_URL + 'movie/popular?language=en-US&page=1', API_OPTIONS)
         const res = await data.json();
         dispatch(addPopularMovies(res.results));
     }

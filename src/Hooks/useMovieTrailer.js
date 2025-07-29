@@ -1,4 +1,4 @@
-import { API_OPTIONS } from '../Utils/Constants';
+import { API_OPTIONS, TMDB_API_URL } from '../Utils/Constants';
 import { useDispatch } from 'react-redux';
 import { addTrailer } from '../Utils/moviesSlice';
 import { useEffect } from 'react';
@@ -8,7 +8,7 @@ const useMovieTrailer = (movieId) => {
 
   const getBackgroundMovie = async () => {
     const data = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}/videos`,
+      TMDB_API_URL + `movie/${movieId}/videos`,
       API_OPTIONS
     );
     const res = await data.json();
